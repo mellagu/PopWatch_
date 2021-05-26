@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PopWatch</string>
+    <string name="title_movie">Movie</string>
+    <string name="title_TvShow">Tv Show</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="imagemovie">imagemovie</string>
+    <string name="failed_notice">Data failed to load</string>
+    <string name="failed_notice2">Data Not Found</string>
+    <string name="featured_movie">Featured Movie</string>
+    <string name="popular_tv_show">Popular TV Show</string>
+    <string name="overview">A young surgeon with Savant syndrome is recruited into the surgical unit of a prestigious hospital. The question will arise: can a person who
+        doesn\'t have the ability to relate to people actually save their lives</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="episodes">Episodes : </string>
+    <string name="maintenance">This Page Is Under Development</string>
+    <string name="toolbar">toolbar</string>
+    <string name="backarrow">backarrow</string>
+    <string name="corner">corner</string>
+    <string name="tab_1">Movie</string>
+    <string name="tab_2">Television</string>
+    <string name="addFavorite">It has been added in favorite!</string>
+    <string name="deletedFavorite">It has been deleted in favorite!</string>
+</resources>

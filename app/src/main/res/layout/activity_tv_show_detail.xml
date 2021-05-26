@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".ui.tvshow.TvShowDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary">
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_tv_detail"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/examplemovie" />
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/backarrow"
+                android:src="@drawable/ic_arrow_back" />
+
+        </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_base_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_base_detail"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/corner"
+            app:layout_constraintTop_toBottomOf="@+id/frame_layout" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:drawableStartCompat="@drawable/ic_language"
+            app:layout_constraintBottom_toBottomOf="@id/iv_base_detail"
+            app:layout_constraintEnd_toEndOf="@id/iv_base_detail"
+            app:layout_constraintStart_toStartOf="@id/iv_base_detail"
+            app:layout_constraintTop_toTopOf="@+id/iv_base_detail"
+            tools:text="en" />
+
+        <ImageView
+            android:id="@+id/iv_base_detail1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_base_detail1"
+            android:contentDescription="@string/corner"
+            app:layout_constraintStart_toEndOf="@id/iv_base_detail"
+            app:layout_constraintTop_toBottomOf="@+id/frame_layout" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Scripted"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/iv_base_detail1"
+            app:layout_constraintEnd_toEndOf="@id/iv_base_detail1"
+            app:layout_constraintStart_toStartOf="@id/iv_base_detail1"
+            app:layout_constraintTop_toTopOf="@+id/iv_base_detail1"/>
+
+        <ImageView
+            android:id="@+id/iv_base_detail2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_base_detail2"
+            android:contentDescription="@string/corner"
+            app:layout_constraintStart_toEndOf="@id/iv_base_detail1"
+            app:layout_constraintTop_toBottomOf="@+id/frame_layout" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_base_detail2"
+            app:layout_constraintEnd_toEndOf="@id/iv_base_detail2"
+            app:layout_constraintStart_toStartOf="@id/iv_base_detail2"
+            app:layout_constraintTop_toTopOf="@+id/iv_base_detail2"
+            tools:text="Ended" />
+
+        <ImageView
+            android:id="@+id/iv_base_detail3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_base_detail3"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/corner"
+            app:layout_constraintTop_toBottomOf="@+id/iv_base_detail" />
+
+        <TextView
+            android:id="@+id/tv_genres"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="@id/iv_base_detail3"
+            app:layout_constraintEnd_toEndOf="@id/iv_base_detail3"
+            app:layout_constraintStart_toStartOf="@id/iv_base_detail3"
+            app:layout_constraintTop_toTopOf="@+id/iv_base_detail3"
+            tools:text="Drama" />
+
+        <ImageView
+            android:id="@+id/iv_base_detail4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:src="@drawable/ic_base_detail4"
+            android:contentDescription="@string/corner"
+            app:layout_constraintStart_toEndOf="@id/iv_base_detail3"
+            app:layout_constraintTop_toBottomOf="@+id/iv_base_detail2" />
+
+        <TextView
+            android:id="@+id/tv_episode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/episodes"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/iv_base_detail4"
+            app:layout_constraintTop_toTopOf="@+id/iv_base_detail4"/>
+
+        <TextView
+            android:id="@+id/tv_episode_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="120"
+            android:textColor="@color/white"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/tv_episode"
+            app:layout_constraintTop_toTopOf="@+id/iv_base_detail4"
+            app:layout_constraintBottom_toBottomOf="@id/iv_base_detail4"/>
+
+        <ImageView
+            android:id="@+id/iv_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_star_rate"
+            android:contentDescription="@string/corner"
+            app:layout_constraintTop_toBottomOf="@id/tv_genres"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/iv_star"
+            app:layout_constraintTop_toBottomOf="@+id/tv_genres"
+            tools:text="8.6" />
+
+        <ToggleButton
+            android:id="@+id/toggle_favorite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/favorite_toggle"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frame_layout" />
+
+
+        <TextView
+            android:id="@+id/tv_original_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_star"
+            tools:text="Grey's Anatomy" />
+
+        <TextView
+            android:id="@+id/tv_tagline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_original_name"
+            tools:text="His mind is a mystery, his methods are a miracle." />
+
+        <TextView
+            android:id="@+id/tv_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/overview"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tagline" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
