@@ -1,6 +1,5 @@
 package com.mellagusty.movieapppopcorn.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,12 +15,13 @@ class PopWatchAdapter(private val listener: (Poster) -> Unit) :
 
     private var list: List<Poster> = ArrayList()
     fun setListData(entertaint: List<Poster>) {
-        Log.d("Popwatch Adp", "size = ${entertaint.size}")
+//        Log.d("Popwatch Adp", "size = ${entertaint.size}")
         list = entertaint
         notifyDataSetChanged()
     }
 
     inner class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
         fun bind(position: Int) {
             val popwatch = list[position]
             itemView.setOnClickListener {
@@ -37,8 +37,8 @@ class PopWatchAdapter(private val listener: (Poster) -> Unit) :
                 .load(popwatch.baseUrl + popwatch.poster_path)
                 .into(imgPoster)
 
-            txtTitle.text = popwatch.original_title?: popwatch.original_name
-            txtDateCard.text = popwatch.release_date?: popwatch.first_air_date
+            txtTitle.text = popwatch.original_title ?: popwatch.original_name
+            txtDateCard.text = popwatch.release_date ?: popwatch.first_air_date
 
         }
     }

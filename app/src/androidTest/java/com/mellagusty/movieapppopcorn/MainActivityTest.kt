@@ -8,8 +8,7 @@ import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.contrib.RecyclerViewActions
-import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
-import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import com.mellagusty.movieapppopcorn.resource.EspressoIdlingResource
 import org.junit.After
@@ -151,6 +150,7 @@ class MainActivityTest {
         onView(withId(R.id.rv_favorite)).perform(
             RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(0)
         )
+        onView(withId(R.id.rv_favorite)).perform(ViewActions.closeSoftKeyboard())
         //Choose Movie Item on RV
         onView(withId(R.id.rv_favorite)).perform(
             RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
@@ -165,7 +165,7 @@ class MainActivityTest {
     }
 
     @Test
-    fun getAddRemoveTVFavorite(){
+    fun getAddRemoveTVFavorite() {
         //Click to the Movie Navigation
         onView(withId(R.id.navigation_TvShow)).perform(click())
 
@@ -184,6 +184,8 @@ class MainActivityTest {
         pressBack()
 
         onView(withId(R.id.navigation_favorite)).perform(click())
+        onView(withText("Television")).perform(click())
+        onView(withId(R.id.rv_favorite)).perform(ViewActions.closeSoftKeyboard())
         onView(withId(R.id.rv_favorite)).perform(
             RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(0)
         )
@@ -200,6 +202,5 @@ class MainActivityTest {
 
     }
 
-    
 
 }
