@@ -16,7 +16,7 @@ import org.junit.Test
 import org.mockito.Mockito
 import org.mockito.Mockito.*
 
-//@RunWith(MockitoJUnitRunner::class)
+
 class RepositoryTest {
 
 
